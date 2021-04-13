@@ -1,0 +1,81 @@
+.school-reviews {
+background-color:var(--bg-karry);
+grid-column: full-start / full-end;
+padding: 4rem;
+&__box {
+text-align: center;
+}
+&__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--black);
+    padding: 2rem .75rem;
+}
+&__text {
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: var(--grey);
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+
+&__photo-box {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(6, 4vw);
+
+}
+
+&__item {
+    &:not(:last-child) {
+        padding-right: 2rem;
+    }
+    &--1 {
+grid-row: 1 / 7;
+grid-column: 1 / span 2;
+    }
+
+&--2 {
+grid-row: 1 / 7;
+grid-column: 3 / span 2;
+
+}
+&--3 {
+grid-row: 1 / 7;
+grid-column: 5 / span 2;
+}
+    }
+
+&__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+&__contact {
+text-align:center;
+}
+
+&__enquiry {
+font-size: 1.4rem;
+font-weight: 700;
+}
+
+&__link {
+   &:link,
+   &:visited {
+    font-weight: 700;
+    font-size: 1,4rem;
+    color: var(--color-primary-1);
+    text-decoration: none;
+    margin-left: .7rem;
+    border-bottom: 1px solid var(--color-primary-1);
+   }
+   
+}
+}

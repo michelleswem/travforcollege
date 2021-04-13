@@ -1,0 +1,69 @@
+// project definition
+:root {
+  --primary-color: #0480fc;
+  --black: #011a32;
+  --grey: #4d5e70;
+  --dark-blue: #075cb2;
+  --blue-light: #008bd9;
+  --text-grey: #828990;
+  --color-grey-light: #435364;
+  --white: #fff;
+  --bg-karry: #ffebd1;
+  --bg-selago: #fff7f7;
+  --bg-bridesmaid: #fee9e8;
+  --box-shadow-color: #a2d0ff;
+  --color-black: #000;
+  --color-primary-2: #f2f9ff;
+  --color-primary-1: #111;
+  --color-green: #09cf70;
+  --color-Grey-light-1: #faf9f9;
+  --color-Grey-light-2: #f4f2f2;
+  --color-Grey-light-3: #f0eeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem =10px
+  @media only screen and (max-width: $break-point-largest) {
+    font-size: 50%; //1rem =8px
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-primary-1);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(2, min-content) 50vw repeat(4, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+  margin: 0 auto;
+  @media only screen and (max-width: $break-point-large) {
+    grid-template-rows: 100vh;
+  }
+  @media only screen and (max-width: $break-point-small) {
+    grid-template-columns:
+      [full-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [full-end];
+  }
+}

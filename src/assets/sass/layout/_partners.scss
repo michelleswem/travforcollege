@@ -1,0 +1,51 @@
+.partners {
+    &__content {
+        background-color:var(--white);
+        grid-column: full-start / col-end 4;
+        padding: 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @media only screen and (max-width:$break-point-large) {
+            grid-column: 1 / -1;
+              }
+    }
+
+        &__heading {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--black);
+        }
+        &__text {
+            font-weight: 100;
+            font-size: 1.8rem;
+            color: var(--grey);
+            margin-bottom: 3rem;
+        }
+
+    &__photos {
+        padding:4rem 0;
+        grid-column: col-start 5 / full-end;
+        display: grid;
+        grid-template-columns: repeat(3, 10vw);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap:2rem;
+        justify-content: center;
+        background-color: var(--color-Grey-light-1);
+        @media only screen and (max-width:$break-point-large) {
+        grid-column: 1 / -1;
+          }
+    }
+
+    &__item {
+
+    }
+    &__img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;  
+    }
+}

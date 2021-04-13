@@ -1,0 +1,58 @@
+.header {
+  background-color: var(--white);
+  height: 9rem;
+  display: flex;
+  padding: 0 6rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  @media only screen and (max-width: $break-point-medium) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    margin-right: 5.2rem;
+    cursor: pointer;
+  }
+  &__logo {
+    max-width: 100%;
+    margin-right: 0.5rem;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  &__nav {
+    margin-right: auto;
+    @media only screen and (max-width: $break-point-medium) {
+      order: 1;
+      margin-right: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--color-grey-light);
+    }
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

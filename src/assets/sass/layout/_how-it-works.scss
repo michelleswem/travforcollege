@@ -1,0 +1,46 @@
+.how-it-works {
+    background-color:var(--color-primary-2);
+    grid-column: full-start / full-end;
+    padding: 5rem;
+    &__box {
+    text-align: center;
+    margin-bottom: 2rem;
+    }
+&__heading-primary {
+font-size:3rem;
+font-weight: 700;
+padding: 2rem .75rem;
+    }
+
+&__container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+grid-gap:8rem;
+
+
+    }
+
+    &__review {
+        display: grid;
+        grid-template-rows: repeat(3, min-content);
+        grid-row-gap:1.8rem;
+        background-color: var(--white);
+        padding:2rem;
+    
+
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__heading-3 {
+    font-size: 1.8rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+
+    }
+}

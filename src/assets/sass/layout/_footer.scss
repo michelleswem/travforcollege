@@ -1,0 +1,81 @@
+.footer {
+    background-color:var(--white);
+    grid-column: full-start / full-end;
+    padding: 7rem;
+    &__box {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+grid-gap:3rem;
+    }
+
+    &__company {
+
+    }
+
+
+    &__heading {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--color-primary-1);
+    }
+
+    &__list {
+list-style: none;
+    }
+
+    &__item {
+&:not(:last-child) {
+    margin-bottom: 1rem;
+}
+    }
+
+
+    &__link {
+        &:link,
+        &:visited {
+        font-size: 1.4rem;
+        color: var(--grey);
+        text-decoration: none;
+        }
+    
+    }
+
+    &__socials {
+margin-top: 4rem;
+display: flex;
+align-items: center;
+    }
+
+    &__img {
+   max-width: 100%;
+   height: auto;
+   &:not(:last-child) {
+    margin-right: 1rem;
+}
+
+    }
+
+    &__address {
+margin-top: 4rem;
+    }
+
+ &__add {
+display: flex;
+align-items: center;
+margin-bottom: 1rem;
+    }
+
+&__photo {
+width:2rem;
+height: auto;
+display: block;
+margin-right: 1rem;
+    }
+
+    &__text {
+font-size: 1.3rem;
+color: var(--grey);
+    }
+
+
+}

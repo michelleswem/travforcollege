@@ -1,0 +1,61 @@
+.btn {
+  &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-size:1.6rem;
+        font-weight: 300;
+        border: none;
+        cursor: pointer;
+        border-radius:.4rem;
+        &:focus {
+          outline: none;
+        }
+    }
+
+    &__small {
+      @media only screen and (max-width:$break-point-medium) {
+        margin-right: 1.5rem;
+       }
+    }
+
+    &__white {
+      background-color: var(--white);
+      color: var(--primary-color);
+      &--large2{
+        padding: 1.8rem 6rem;
+       }
+    }
+    
+    &__blue {
+         background-color:var(--primary-color);
+            color:var(--white);
+          box-shadow: 0 0 10px var(--box-shadow-color);
+           padding: 1.3rem 2rem;
+
+           &--large2  {
+             padding: 1.5rem 3rem;
+           }
+
+           &--large1{
+            padding: 1.8rem 8rem;
+            @media only screen and (max-width:$break-point-medium) {
+              margin-bottom: 1.5rem;
+             }
+           }
+    }
+}
+
+
+.btn-text{
+  &:link,
+  &:visited {
+      text-decoration: none;
+      font-weight: 300;
+      color:var(--color-black);
+      font-size: small;
+
+  }
+  }
+
+

@@ -1,0 +1,31 @@
+.video-review {
+    background-color:var(--white);
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 8vw);
+    padding:15rem;
+   
+
+    &__item {
+grid-row: 1 / -1;
+grid-column: 1 / -1;
+text-align: center;
+    }
+
+
+    &__video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+
+    }
+    &__app {
+        font-size: 3rem;
+        @media only screen and (max-width:$break-point-medium) {
+            font-size: 1.5rem;
+         }
+
+    }
+}
